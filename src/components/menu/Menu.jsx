@@ -1,5 +1,5 @@
-import { MENUS } from '../../constants/menus';
-import { StyledLink, StyledMenu } from './styles';
+import { MENUS } from '../../constants/menu';
+import { StyledLink, StyledMenu, StyledMenuItem } from './styles';
 
 const Menu = () => {
 	return (
@@ -7,11 +7,11 @@ const Menu = () => {
 			<StyledMenu>
 				{MENUS.map(menu => {
 					return (
-						<li>
+						<StyledMenuItem key={menu.idMenu}>
 							<StyledLink to={menu.link} color={menu.color}>
 								{menu.text}
 							</StyledLink>
-						</li>
+						</StyledMenuItem>
 					);
 				})}
 			</StyledMenu>

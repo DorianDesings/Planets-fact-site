@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Planet from '../components/planet/Planet';
-import { MENUS } from '../constants/menus';
+import { MENUS } from '../constants/menu';
 
 const Router = () => {
 	return (
@@ -8,6 +8,7 @@ const Router = () => {
 			{MENUS.map(menu => {
 				return (
 					<Route
+						key={menu.idRouter}
 						path={menu.link}
 						element={<Planet name={menu.text}>{menu.text}</Planet>}
 					/>
