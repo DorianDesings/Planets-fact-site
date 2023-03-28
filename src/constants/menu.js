@@ -4,23 +4,27 @@ import { COLORS } from '../styles/colors';
 export const MENUS = [
 	{
 		id: v4(),
-		color: COLORS.mercury,
-		text: 'mercury'
+		text: 'mercury',
+		link: '/mercury',
+		color: COLORS.mercury
 	},
 	{
 		id: v4(),
-		color: COLORS.venus,
-		text: 'venus'
+		text: 'venus',
+		link: '/venus',
+		color: COLORS.venus
 	},
 	{
 		id: v4(),
-		color: COLORS.earth,
-		text: 'earth'
+		text: 'earth',
+		link: '/earth',
+		color: COLORS.earth
 	},
 	{
 		id: v4(),
-		color: COLORS.mars,
-		text: 'mars'
+		text: 'mars',
+		link: '/mars',
+		color: COLORS.mars
 	},
 	{
 		id: v4(),
