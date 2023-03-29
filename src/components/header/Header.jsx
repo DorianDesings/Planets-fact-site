@@ -10,7 +10,7 @@ const Header = () => {
 				<h1>THE PLANETS</h1>
 				<img
 					onClick={() => setOpen(!open)}
-					src='/public/images/icon-hamburger.svg'
+					src='/images/icon-hamburger.svg'
 					alt=''
 				/>
 			</StyledHeaderTop>
