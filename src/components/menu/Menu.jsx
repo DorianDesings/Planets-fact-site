@@ -1,10 +1,10 @@
 import { MENUS } from '../../constants/menu';
 import { StyledLink, StyledMenu, StyledMenuItem } from './styles';
 
-const Menu = () => {
+const Menu = ({ open }) => {
 	return (
 		<nav>
-			<StyledMenu>
+			<StyledMenu open={open}>
 				{MENUS.map(menu => {
 					return (
 						<StyledMenuItem key={menu.idMenu}>

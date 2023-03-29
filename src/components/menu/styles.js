@@ -14,6 +14,8 @@ const StyledMenu = styled.ul`
 	font-weight: 700;
 	text-transform: uppercase;
 	background-color: ${COLORS.bgColor};
+	transition: transform 0.3s;
+	transform: translateX(${({ open }) => (open ? 0 : '100%')});
 
 	@media screen and (min-width: 768px) {
 		flex-direction: row;

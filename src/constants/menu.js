@@ -6,7 +6,7 @@ export const MENUS = [
 		idRouter: v4(),
 		idMenu: v4(),
 		text: 'mercury',
-		link: '/mercury',
+		link: '/',
 		color: COLORS.mercury
 	},
 	{
