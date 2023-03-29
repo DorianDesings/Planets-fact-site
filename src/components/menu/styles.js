@@ -2,10 +2,17 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { COLORS } from '../../styles/colors';
 
-const StyledMenu = styled.ul`
+const StyledNav = styled.nav`
 	position: absolute;
 	top: 85px;
-	left: 0;
+	left: -2rem;
+	width: calc(100% + 4rem);
+	transition: transform 0.3s;
+	transform: translateX(${({ open }) => (open ? 0 : '100%')});
+	background-color: ${COLORS.bgColor};
+`;
+
+const StyledMenu = styled.ul`
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
@@ -13,9 +20,6 @@ const StyledMenu = styled.ul`
 	height: calc(100vh - 85px);
 	font-weight: 700;
 	text-transform: uppercase;
-	background-color: ${COLORS.bgColor};
-	transition: transform 0.3s;
-	transform: translateX(${({ open }) => (open ? 0 : '100%')});
 
 	@media screen and (min-width: 768px) {
 		flex-direction: row;
@@ -59,4 +63,4 @@ const StyledLink = styled(NavLink)`
 	}
 `;
 
-export { StyledMenu, StyledMenuItem, StyledLink };
+export { StyledNav, StyledMenu, StyledMenuItem, StyledLink };

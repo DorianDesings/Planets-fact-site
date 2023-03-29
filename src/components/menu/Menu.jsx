@@ -1,21 +1,25 @@
 import { MENUS } from '../../constants/menu';
-import { StyledLink, StyledMenu, StyledMenuItem } from './styles';
+import { StyledLink, StyledMenu, StyledMenuItem, StyledNav } from './styles';
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
 	return (
-		<nav>
-			<StyledMenu open={open}>
+		<StyledNav open={open}>
+			<StyledMenu>
 				{MENUS.map(menu => {
 					return (
 						<StyledMenuItem key={menu.idMenu}>
-							<StyledLink to={menu.link} color={menu.color}>
+							<StyledLink
+								onClick={() => setOpen(false)}
+								to={menu.link}
+								color={menu.color}
+							>
 								{menu.text}
 							</StyledLink>
 						</StyledMenuItem>
 					);
 				})}
 			</StyledMenu>
-		</nav>
+		</StyledNav>
 	);
 };
 
